@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { View } from "react-native";
 import { Text } from "../text";
-import { styles } from "./form-control-styles";
+import { styles } from "./FormControl.styles";
 
 type FormControlRootProps = {
   children: ReactNode;
