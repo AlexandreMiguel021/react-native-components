@@ -4,9 +4,9 @@ import { Entypo } from "@expo/vector-icons";
 
 import { Option } from "@types";
 
-import { HStack } from "../hstack";
+import { HStack } from "../HStack";
 import { Text } from "../text";
-import { VStack } from "../vstack";
+import { VStack } from "../VStack";
 import { FormControl } from "../form-control";
 import { styles } from "./RadioButton.styles";
 
