@@ -3,7 +3,7 @@ import { TouchableOpacity, View } from "react-native";
 import Animated from "react-native-reanimated";
 
 import { toast } from "@hooks";
-import { OptionModel } from "@models";
+import { Option } from "@types";
 
 import { InputSearch } from "../InputSearch";
 import { Loading } from "../loading";
@@ -14,7 +14,7 @@ export type ComboboxProps = {
   placeholder?: string;
   value: string;
   onChange: (value: string) => void;
-  handleSearch: (value: string) => Promise<OptionModel[]>;
+  handleSearch: (value: string) => Promise<Option[]>;
 };
 
 export function Combobox({
@@ -25,7 +25,7 @@ export function Combobox({
   const [value, setValue] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [selected, setSelected] = useState<boolean>(false);
-  const [options, setOptions] = useState<OptionModel[]>([]);
+  const [options, setOptions] = useState<Option[]>([]);
 
   const { debouncedValue, isChanging } = useDebounce(value);
 
